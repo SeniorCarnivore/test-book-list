@@ -1,0 +1,161 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button {
+  outline: none;
+}
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-holder {
+  background-color: #354052;
+}
+
+.editor {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .save {
+    width: 100%;
+    height: 30px;
+    color: white;
+    text-align: center;
+    background: #1abc9c;
+    border: 0;
+    box-shadow: 0 2px 0 0 #12ab8d;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .3s;
+
+    &.disabled {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 0 #12ab8d;
+    }
+  }
+}
+
+.clear-storage {
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 20px;
+
+  &:before {
+    content: '✖';
+    transform: translate3d(-5px, -3px, 0) rotate(0deg);
+    display: block;
+    position: absolute;
+    transition: all .3s;
+  }
+
+  &:hover {
+    &:before {
+      transform: translate3d(-5px, -2px, 0) rotate(180deg);
+    }
+  }
+}
+
+.books-list-holder {
+  background-color: #ecf2f6;
+}
+
+.books-list {
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.book {
+  background-color: #fff;
+  list-style: none;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  .book-name {
+    margin-top: 0;
+  }
+
+  .book-author {
+    margin-top: 0;
+  }
+
+  .book-button {
+    display: inline-block;
+    line-height: 30px;
+    color: #fff;
+    padding: 0 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    transform: translateY(0);
+    transition: all .3s;
+
+    &.book-edit {
+      background-color: #1abc9c;
+      box-shadow: 0 2px 0 0 #12ab8d;
+
+      &:hover {
+        box-shadow: 0 0 0 0 #12ab8d;
+      }
+    }
+
+    &.book-remove {
+      background-color: #ec6249;
+      box-shadow: 0 2px 0 0 #d4573a;
+
+      &:hover {
+        box-shadow: 0 0 0 0 #d4573a;
+      }
+    }
+
+    &:hover {
+      transform: translateY(2px);
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .main-wrapper {
+    height: 100vh;
+        flex-direction: row;
+  }
+
+  .books-list-holder {
+    overflow-y: scroll;
+    width: calc(100% - 320px);
+  }
+
+  .form-holder {
+    width: 320px;
+    height: 100vh;
+  }
+}

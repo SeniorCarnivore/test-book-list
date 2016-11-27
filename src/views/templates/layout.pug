@@ -1,0 +1,20 @@
+doctype html
+- var title = 'Project title'
+
+block vars
+
+html.no-js(lang="")
+  head
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+    link(rel="stylesheet", href="dist/styles/vendor.css")
+    link(rel="stylesheet", href="dist/styles/main.css")
+
+  body
+
+    block content
+    script(src="dist/scripts/vendor.js")
+    script(src="dist/scripts/main.js")
+    block scripts

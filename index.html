@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/vendor.css">
+    <link rel="stylesheet" href="dist/styles/main.css">
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <div class="form-holder">
+        <form class="editor" id="editor">
+          <input name="name" placeholder="Name">
+          <input name="author" placeholder="Author">
+          <input name="year" placeholder="Year">
+          <input name="pages" placeholder="Pages">
+          <input name="id" type="hidden">
+          <button class="save disabled">Save</button>
+        </form><a class="clear-storage" href="#">Clear local-storage</a>
+      </div>
+      <div class="books-list-holder">
+        <ul class="books-list"></ul>
+      </div>
+    </main>
+    <script>var dummyBooks = '[{"id":"qwe","author":"Test I","year":"1999","name":"Test’s I book","pages":"123"},{"id":"asd","author":"Test II","year":"1999","name":"Test’s II book","pages":"123"},{"id":"zxc","author":"Test III","year":"1999","name":"Test’s III book","pages":"123"},{"id":"poi","author":"Test IV","year":"1999","name":"Test’s IV book","pages":"123"},{"id":"dfgh","author":"Test V","year":"1999","name":"Test’s V book","pages":"123"}]';</script>
+    <script src="dist/scripts/vendor.js"></script>
+    <script src="dist/scripts/main.js"></script>
+  </body>
+</html>

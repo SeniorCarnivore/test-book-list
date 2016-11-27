@@ -1,0 +1,24 @@
+
+extends templates/layout
+block vars
+  - var title = 'BOOKS'
+
+block content
+  main.main-wrapper
+    .form-holder
+      form#editor.editor
+        input(name='name' placeholder="Name")
+        input(name='author' placeholder="Author")
+        input(name='year' placeholder="Year")
+        input(name='pages' placeholder="Pages")
+        input(name='id' type="hidden")
+
+        button.save.disabled Save
+
+      a.clear-storage(href="#") Clear local-storage
+
+    .books-list-holder
+      ul.books-list
+
+  script.
+    var dummyBooks = '[{"id":"qwe","author":"Test I","year":"1999","name":"Test’s I book","pages":"123"},{"id":"asd","author":"Test II","year":"1999","name":"Test’s II book","pages":"123"},{"id":"zxc","author":"Test III","year":"1999","name":"Test’s III book","pages":"123"},{"id":"poi","author":"Test IV","year":"1999","name":"Test’s IV book","pages":"123"},{"id":"dfgh","author":"Test V","year":"1999","name":"Test’s V book","pages":"123"}]';
